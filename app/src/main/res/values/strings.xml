@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">MovieFinder</string>
+    <string name="app_name" translatable="false">MovieFinder</string>
     <string name="joker">Joker</string>
     <string name="batman">Batman</string>
     <string name="button_details">Details</string>
+    <string name="invite_friend">Invite friend</string>
+    <string name="hint_comment">Write your comment here ...</string>
 </resources>
