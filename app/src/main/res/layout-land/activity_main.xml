@@ -1,79 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    android:orientation="vertical"
-    android:weightSum="4"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:padding="4dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:layout_weight="1">
 
         <ImageView
+            android:id="@+id/image_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/film_batman_small"
-            android:scaleType="fitStart"/>
+            android:scaleType="centerCrop"
+            android:src="@drawable/film_batman_small" />
 
-        <TextView
-            android:id="@+id/textview_batman"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:textSize="20sp"
-            android:layout_gravity="fill_vertical"
-            android:textColor="#000"
-            android:layout_marginStart="36dp"
-            android:layout_marginEnd="36dp"
-            android:text="@string/batman"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            app:strokeColor="@android:color/darker_gray"
+            app:strokeWidth="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
 
-        <Button
-            android:id = "@+id/button_batman_details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill_vertical"
-            android:text="@string/button_details"/>
+                <TextView
+                    android:id="@+id/textview_batman"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="4"
+                    android:text="Batman"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_batman_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/details" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
+
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:padding="4dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:layout_weight="1">
 
         <ImageView
+            android:id="@+id/image_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/film_joker_small"
-            android:scaleType="fitStart"/>
+            android:scaleType="centerCrop"
+            android:src="@drawable/film_joker_small" />
 
-        <TextView
-            android:id="@+id/textview_joker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:textSize="20sp"
-            android:layout_gravity="fill_vertical"
-            android:textColor="#000"
-            android:layout_marginStart="36dp"
-            android:layout_marginEnd="36dp"
-            android:text="@string/joker"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            app:strokeColor="@android:color/darker_gray"
+            app:strokeWidth="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="vertical">
 
-        <Button
-            android:id = "@+id/button_joker_details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill_vertical"
-            android:text="@string/button_details"/>
+                <TextView
+                    android:id="@+id/textview_joker"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="4"
+                    android:text="Joker"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_joker_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/details" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
-
 </LinearLayout>

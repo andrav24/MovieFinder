@@ -1,4 +1,4 @@
-package tech.andrav.moviefinder
+package dev.andrav.moviefinder
 
 import android.app.Activity
 import android.content.Intent
@@ -8,8 +8,9 @@ import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.DialogFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), CustomDialogFragment.CustomDialogListener {
 
     private lateinit var mTextViewBatman : TextView
     private lateinit var mTextViewJoker : TextView
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d(MainActivity.TAG, "onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -87,6 +89,15 @@ class MainActivity : AppCompatActivity() {
             Log.i(TAG, "the checkbox is : $answerFromCheckbox")
             Log.i(TAG, "the comment is : $answerFromComment")
         }
+    }
+
+    override fun onBackPressed() {
+        val dialogFragment = CustomDialogFragment()
+        dialogFragment.show(supportFragmentManager, "CustomDialogFragment")
+    }
+
+    override fun onDialogPositiveClick(dialog: DialogFragment) {
+        super.onBackPressed()
     }
 
     companion object {
