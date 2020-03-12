@@ -1,4 +1,4 @@
-package tech.andrav.moviefinder
+package dev.andrav.moviefinder
 
 import android.app.Activity
 import android.content.Intent
@@ -11,8 +11,8 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import tech.andrav.moviefinder.MainActivity.Companion.MESSAGE_FROM_CHECKBOX
-import tech.andrav.moviefinder.MainActivity.Companion.MESSAGE_FROM_COMMENT
+import dev.andrav.moviefinder.MainActivity.Companion.MESSAGE_FROM_CHECKBOX
+import dev.andrav.moviefinder.MainActivity.Companion.MESSAGE_FROM_COMMENT
 
 class SecondActivity : AppCompatActivity() {
 
@@ -21,7 +21,7 @@ class SecondActivity : AppCompatActivity() {
     private lateinit var mCheckBox : CheckBox
     private lateinit var mEditText : EditText
 
-    private var mMessageFromCheckbox = ""
+    private var mMessageFromCheckbox = "not checked"
     private var mMessageFromComment = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
